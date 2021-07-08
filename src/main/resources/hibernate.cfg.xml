@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresqsl://loalhost:5432/praticeTest</property>
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect </property>
+        <property name="show_sql">true</property>
+    </session-factory>
+</hibernate-configuration>
