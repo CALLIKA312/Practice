@@ -4,10 +4,9 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "testTable")
+@Table(name = "public.table")
 public class TestTable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int index;
 
     public int getIndex() {
@@ -24,7 +23,8 @@ public class TestTable {
     public TestTable() {
     }
 
-    public TestTable(String name, int value) {
+    public TestTable(int index, String name, int value) {
+        this.index = index;
         this.name = name;
         this.value = value;
     }

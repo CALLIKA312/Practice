@@ -17,7 +17,7 @@ public class Controller {
     public void initialize() {
         System.out.println(123);
         TestTableService testTableService = new TestTableService();
-        TestTable testTable = new TestTable("Apelsin", 149);
+        TestTable testTable = new TestTable(7, "Apelsin", 149);
         testTableService.saveTestTable(testTable);
     }
 }

@@ -14,6 +14,7 @@ public class TestTableDao {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.save(testTable);
+        //session.createNativeQuery("insert into public.table values(400,'Арбуз',5)", TestTable.class).executeUpdate();
         tx1.commit();
         session.close();
     }
