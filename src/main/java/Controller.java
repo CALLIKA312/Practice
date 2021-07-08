@@ -1,12 +1,23 @@
+import javafx.fxml.FXML;
 import models.TestTable;
 import services.TestTableService;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 public class Controller {
+    @FXML
+    private ResourceBundle resources;
 
-    public static void main(String[] args) {
+    @FXML
+    private URL location;
 
+
+    @FXML
+    public void initialize() {
+        System.out.println(123);
         TestTableService testTableService = new TestTableService();
         TestTable testTable = new TestTable("Apelsin", 149);
-
+        testTableService.saveTestTable(testTable);
     }
 }

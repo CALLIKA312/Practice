@@ -6,7 +6,7 @@
         <id name="index" type="int" column="index">
             <generator class="native"/>
         </id>
-        <property name="name" type="string" column="Название"/>
-        <property name="value" type="int" column="Количество"/>
+        <property name="name" type="string" column="name"/>
+        <property name="value" type="int" column="value"/>
     </class>
 </hibernate-mapping>
