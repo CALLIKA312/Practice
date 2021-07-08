@@ -9,6 +9,15 @@ public class TestTable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int index;
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
     private String name;
     private int value;
 
