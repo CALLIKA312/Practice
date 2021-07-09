@@ -3,6 +3,8 @@ package services;
 import dao.TestTableDao;
 import models.TestTable;
 
+import java.util.List;
+
 public class TestTableService {
     private TestTableDao testTableDao = new TestTableDao();
 
@@ -23,6 +25,10 @@ public class TestTableService {
 
     public void deleteTestTable(TestTable testTable) {
         testTableDao.delete(testTable);
+    }
+
+    public static List<TestTable> getAll(){
+        return TestTableDao.findAll();
     }
 
 }
