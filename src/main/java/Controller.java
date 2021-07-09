@@ -9,6 +9,7 @@ import services.TestTableService;
 
 import java.beans.PropertyEditor;
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class Controller {
@@ -17,7 +18,7 @@ public class Controller {
     public TableColumn<TestTable, String> nameColumn;
     public TableColumn<TestTable, Integer> valueColumn;
 
-    private ObservableList<TestTable> testTableData = FXCollections.observableArrayList(TestTableService.getAll());
+
     @FXML
     private ResourceBundle resources;
 
@@ -27,18 +28,18 @@ public class Controller {
     @FXML
     public void initialize() {
 
+        TestTableService testTableService = new TestTableService();
+        TestTable testTable = new TestTable("Yabloko", new Random().nextInt(300));
+        testTableService.saveTestTable(testTable);
 
-        idColumn.setCellValueFactory(new PropertyValueFactory<TestTable, Integer>("id"));
+
+
+        idColumn.setCellValueFactory(new PropertyValueFactory<TestTable, Integer>("index"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<TestTable, String>("name"));
         valueColumn.setCellValueFactory(new PropertyValueFactory<TestTable, Integer>("value"));
 
-
+        ObservableList<TestTable> testTableData = FXCollections.observableArrayList(TestTableService.getAll());
         mainTable_TableView.setItems(testTableData);
-
-        /*TestTableService testTableService = new TestTableService();
-        TestTable testTable = new TestTable("Apelsin", 149);
-        testTableService.saveTestTable(testTable);*/
-
 
     }
 

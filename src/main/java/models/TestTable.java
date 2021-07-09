@@ -42,11 +42,12 @@ public class TestTable {
     @Column(name = "value")
     private int value;
 
+
     public TestTable() {
     }
 
     public TestTable(String name, int value) {
-        //this.index = setIndex();
+        //this.index = getIndex();
         this.name = name;
         this.value = value;
     }
