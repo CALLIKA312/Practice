@@ -16,7 +16,7 @@ public class TestTableDao {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.save(testTable);
-       // session.createNativeQuery("insert into public.table values(400,'Арбуз',5)", TestTable.class).executeUpdate();
+        // session.createNativeQuery("insert into public.table values(400,'Арбуз',5)", TestTable.class).executeUpdate();
         tx1.commit();
         session.close();
     }
@@ -37,10 +37,8 @@ public class TestTableDao {
         session.close();
     }
 
-
-
-    public static List<TestTable> findAll(){
-        return (List<TestTable>)  HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From models.TestTable").list();
+    public static List<TestTable> findAll() {
+        return (List<TestTable>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From models.TestTable").list();
     }
 
 }

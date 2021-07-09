@@ -1,12 +1,6 @@
 package models;
 
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenericGenerator;
-import services.TestTableService;
-
 import javax.persistence.*;
-import java.util.Comparator;
-import java.util.List;
 
 
 @Entity

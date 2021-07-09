@@ -6,7 +6,7 @@ import models.TestTable;
 import java.util.List;
 
 public class TestTableService {
-    private TestTableDao testTableDao = new TestTableDao();
+    private static TestTableDao testTableDao = new TestTableDao();
 
     public TestTableService() {
     }

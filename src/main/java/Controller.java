@@ -9,6 +9,7 @@ import services.TestTableService;
 
 import java.beans.PropertyEditor;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -29,9 +30,8 @@ public class Controller {
     public void initialize() {
 
         TestTableService testTableService = new TestTableService();
-        TestTable testTable = new TestTable("Yabloko", new Random().nextInt(300));
+        TestTable testTable = new TestTable("Vishnya", new Random().nextInt(300));
         testTableService.saveTestTable(testTable);
-
 
 
         idColumn.setCellValueFactory(new PropertyValueFactory<TestTable, Integer>("index"));
