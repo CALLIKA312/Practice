@@ -10,23 +10,6 @@ public class TestTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int index;
 
-    /*private int setIndex() {
-        int index = 1;
-        List<TestTable> testTableList = TestTableService.getAll();
-        testTableList.sort(Comparator.comparingInt(TestTable::getIndex));
-        int curIndexInList = 0;
-        while (true) {
-            if (index < testTableList.get(curIndexInList).getIndex()) {
-                return index;
-            }
-            curIndexInList++;
-            index++;
-            if (index > testTableList.size()) {
-                return index;
-            }
-        }
-    }*/
-
     public int getIndex() {
         return index;
     }
@@ -41,13 +24,6 @@ public class TestTable {
     }
 
     public TestTable(String name, int value) {
-        //this.index = getIndex();
-        this.name = name;
-        this.value = value;
-    }
-
-    public TestTable(int index, String name, int value) {
-        this.index = index;
         this.name = name;
         this.value = value;
     }

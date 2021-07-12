@@ -1,5 +1,8 @@
 package utils;
 
+import models.Cities;
+import models.Regions;
+import models.SnowLoads;
 import models.TestTable;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -17,6 +20,9 @@ public class HibernateSessionFactoryUtil {
             try {
                 Configuration configuration = new Configuration().configure();
                 configuration.addAnnotatedClass(TestTable.class);
+                configuration.addAnnotatedClass(Cities.class);
+                configuration.addAnnotatedClass(Regions.class);
+                configuration.addAnnotatedClass(SnowLoads.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
             } catch (Exception e) {

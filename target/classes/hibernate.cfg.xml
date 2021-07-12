@@ -16,5 +16,10 @@
 
 
         <mapping resource="testTable.hbm.xml"/>
+        <mapping resource="cities.hbm.xml"/>
+        <mapping resource="regions.hbm.xml"/>
+        <mapping resource="snowLoads.hbm.xml"/>
+
+
     </session-factory>
 </hibernate-configuration>

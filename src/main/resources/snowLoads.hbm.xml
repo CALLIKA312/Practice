@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="models.SnowLoads" table="snowLoads">
+        <id name="area" type="int" column="area">
+        </id>
+        <property name="load_n" type="string" column="load_n"/>
+        <property name="load_r" type="int" column="load_r"/>
+    </class>
+</hibernate-mapping>
