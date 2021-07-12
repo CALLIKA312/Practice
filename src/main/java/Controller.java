@@ -2,10 +2,12 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import models.Cities;
+import models.Cover;
 import models.Regions;
-import models.TestTable;
 import services.CitiesService;
+import services.CoverService;
 import services.RegionsService;
 import services.SnowLoadsService;
 
@@ -14,10 +16,11 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller {
-    public TableView<TestTable> mainTable_TableView;
-    public TableColumn<TestTable, Integer> idColumn;
-    public TableColumn<TestTable, String> nameColumn;
-    public TableColumn<TestTable, Integer> valueColumn;
+    public TableView<Cover> mainTable_TableView;
+    public TableColumn<Cover, Integer> idColumn;
+    public TableColumn<Cover, Integer> massColumn;
+    public TableColumn<Cover, String> title_displayColumn;
+    public TableColumn<Cover, Integer> construction_idColumn;
     public ComboBox<Cities> cities_CB;
     public TextField test_TF;
     public Label region_Label;
@@ -39,18 +42,18 @@ public class Controller {
         testTableService.saveTestTable(testTable);*/
 
 
-        /* idColumn.setCellValueFactory(new PropertyValueFactory<TestTable, Integer>("index"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<TestTable, String>("name"));
-        valueColumn.setCellValueFactory(new PropertyValueFactory<TestTable, Integer>("value"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        massColumn.setCellValueFactory(new PropertyValueFactory<>("mass"));
+        title_displayColumn.setCellValueFactory(new PropertyValueFactory<>("title_display"));
+        construction_idColumn.setCellValueFactory(new PropertyValueFactory<>("construction_id"));
 
-        ObservableList<TestTable> testTableData = FXCollections.observableArrayList(TestTableService.getAll());
-        mainTable_TableView.setItems(testTableData);*/
+        mainTable_TableView.setItems(FXCollections.observableArrayList(CoverService.getAll()));
+
 
 
         cities_CB.setItems(FXCollections.observableArrayList(CitiesService.getAll()));
         new AutoCompleteComboBoxListener<>(cities_CB);
 
-        List list = SnowLoadsService.getAll();
         region_CB.setItems(FXCollections.observableArrayList(SnowLoadsService.getAll()));
         new AutoCompleteComboBoxListener<>(region_CB);
 
