@@ -19,6 +19,7 @@
         <mapping resource="cities.hbm.xml"/>
         <mapping resource="regions.hbm.xml"/>
         <mapping resource="snowLoads.hbm.xml"/>
+        <mapping resource="cover.hbm.xml"/>
 
 
     </session-factory>

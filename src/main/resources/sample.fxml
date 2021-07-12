@@ -14,7 +14,7 @@
         </TableView>
         <Button layoutX="393.0" layoutY="272.0" mnemonicParsing="false" text="Button" />
       <ComboBox fx:id="cities_CB" editable="true" layoutX="25.0" layoutY="272.0" onAction="#citiesChosen" prefWidth="150.0" />
-      <Label fx:id="region_Label" layoutX="25.0" layoutY="319.0" text="Label" />
+      <Label fx:id="region_Label" layoutX="212.0" layoutY="317.0" text="Label" />
       <ComboBox fx:id="region_CB" layoutX="212.0" layoutY="272.0" onAction="#regionChosen" prefWidth="150.0" />
     </children>
 </Pane>

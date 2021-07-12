@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="models.SnowLoads" table="snowLoads">
+    <class name="models.SnowLoads" table="snowloads">
         <id name="area" type="int" column="area">
         </id>
         <property name="load_n" type="string" column="load_n"/>

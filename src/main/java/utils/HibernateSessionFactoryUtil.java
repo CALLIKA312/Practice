@@ -1,9 +1,6 @@
 package utils;
 
-import models.Cities;
-import models.Regions;
-import models.SnowLoads;
-import models.TestTable;
+import models.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -23,6 +20,7 @@ public class HibernateSessionFactoryUtil {
                 configuration.addAnnotatedClass(Cities.class);
                 configuration.addAnnotatedClass(Regions.class);
                 configuration.addAnnotatedClass(SnowLoads.class);
+                configuration.addAnnotatedClass(Cover.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
             } catch (Exception e) {
