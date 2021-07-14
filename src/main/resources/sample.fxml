@@ -1,21 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
-    <children>
-        <TableView fx:id="mainTable_TableView" layoutX="25.0" layoutY="14.0" prefHeight="220.0" prefWidth="739.0">
-            <columns>
-                <TableColumn fx:id="idColumn" prefWidth="100.0" text="Id" />
-                <TableColumn fx:id="massColumn" prefWidth="160.0" text="Mass" />
-                <TableColumn fx:id="title_displayColumn" prefWidth="160.0" text="Title" />
-            <TableColumn fx:id="construction_idColumn" prefWidth="155.0" text="Construction" />
-            </columns>
-        </TableView>
-        <Button layoutX="393.0" layoutY="434.0" mnemonicParsing="false" text="Button" />
-      <ComboBox fx:id="cities_CB" editable="true" layoutX="25.0" layoutY="434.0" onAction="#citiesChosen" prefWidth="150.0" />
-      <Label fx:id="region_Label" layoutX="212.0" layoutY="479.0" text="Label" />
-      <ComboBox fx:id="region_CB" layoutX="212.0" layoutY="434.0" onAction="#regionChosen" prefWidth="150.0" />
-    </children>
-</Pane>
+<AnchorPane prefHeight="710.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+      <children>
+          <VBox prefHeight="550.0" prefWidth="775.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                  <HBox prefHeight="476.0" prefWidth="1061.0">
+                      <children>
+                  <TabPane fx:id="mainTabPane" prefHeight="476.0" prefWidth="1055.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="choseCable_Tab" text="Выбор провода">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox prefHeight="450.0" prefWidth="1046.0">
+                                       <children>
+                                          <VBox prefHeight="450.0" prefWidth="226.0">
+                                             <children>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="191.0">
+                                                   <children>
+                                                      <Pane layoutX="3.0" layoutY="14.0" prefHeight="46.0" prefWidth="170.0">
+                                                         <children>
+                                                            <Label prefHeight="17.0" prefWidth="142.0" text="Mass" />
+                                                            <ComboBox fx:id="massCables_CB" editable="true" layoutX="3.0" layoutY="20.0" onAction="#massCablesChose" prefHeight="25.0" prefWidth="135.0" />
+                                                            <Button fx:id="clearMassCables_Button" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearNumberOfCores_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Button fx:id="chooseCabel_Button" layoutX="44.0" layoutY="78.0" mnemonicParsing="false" onAction="#cabelChose" text="Choose selected" />
+                                                      <Button fx:id="goToCovers_Button" layoutX="53.0" layoutY="119.0" mnemonicParsing="false" onAction="#goToCovers_Press" text="Go to Covers" />
+                                                      <Button fx:id="deleteChosenCable_Button" layoutX="49.0" layoutY="159.0" mnemonicParsing="false" onAction="#deleteChosenCable" text="Delete chosen" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <Pane prefHeight="233.0" prefWidth="191.0">
+                                                   <children>
+                                                      <TableView fx:id="choseCables_TableView" prefHeight="233.0" prefWidth="191.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="choseCablesArticul_Column" prefWidth="97.0" text="Articul" />
+                                                          <TableColumn fx:id="massChoseCables_Column" prefWidth="94.0" text="Mass" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </VBox>
+                                          <TableView fx:id="cables_TableView" prefHeight="450.0" prefWidth="895.0">
+                                            <columns>
+                                              <TableColumn fx:id="articulCables_Column" prefWidth="195.0" text="Articul" />
+                                              <TableColumn fx:id="diametrCabeles_Column" prefWidth="179.0" text="Diametr" />
+                                                <TableColumn fx:id="massCables_Column" prefWidth="229.0" text="Mass" />
+                                                <TableColumn fx:id="voltageCables_Column" prefWidth="232.0" text="Voltage" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="choseCover_Tab" text="Выбор крышки">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="279.0">
+                                 <children>
+                                    <HBox prefHeight="457.0" prefWidth="1046.0">
+                                       <children>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="189.0">
+                                                          <children>
+                                                              <Pane layoutX="3.0" layoutY="14.0" prefHeight="46.0" prefWidth="170.0">
+                                                                  <children>
+                                                                      <Label prefHeight="17.0" prefWidth="142.0" text="Heigth" />
+                                                                      <ComboBox fx:id="height_CB" editable="true" layoutX="3.0" layoutY="20.0" onAction="#heightChose" prefHeight="25.0" prefWidth="135.0" />
+                                                                      <Button fx:id="clearHeight_Button" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearHeight_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                                  </children>
+                                                              </Pane>
+                                                              <Pane layoutX="3.0" layoutY="60.0" prefHeight="46.0" prefWidth="170.0">
+                                                                  <children>
+                                                                      <Label prefHeight="17.0" prefWidth="142.0" text="Width" />
+                                                                      <ComboBox fx:id="width_CB" editable="true" layoutX="3.0" layoutY="20.0" onAction="#widthChose" prefHeight="25.0" prefWidth="135.0" />
+                                                                      <Button fx:id="clearWidth_Button" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearWidth_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                                  </children>
+                                                              </Pane>
+                                                              <Pane layoutX="3.0" layoutY="106.0" prefHeight="46.0" prefWidth="170.0">
+                                                                  <children>
+                                                                      <Label prefHeight="17.0" prefWidth="142.0" text="Length" />
+                                                                      <ComboBox fx:id="length_CB" editable="true" layoutX="3.0" layoutY="20.0" onAction="#lengthChose" prefHeight="25.0" prefWidth="135.0" />
+                                                                      <Button fx:id="clearLength_Button" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearLength_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                                  </children>
+                                                              </Pane>
+                                                              <Button fx:id="chooseCover_Button" layoutX="39.0" layoutY="193.0" mnemonicParsing="false" onAction="#coverChose" text="Choose selected" />
+                                                          </children>
+                                                      </AnchorPane>
+                                                    <TableView fx:id="covers_TableView" prefHeight="457.0" prefWidth="858.0">
+                                                        <columns>
+                                                            <TableColumn fx:id="articulCovers_Column" prefWidth="105.0" text="Articul" />
+                                                            <TableColumn fx:id="massCovers_Column" prefWidth="139.0" text="Mass" />
+                                                            <TableColumn fx:id="lengthCovers_Column" prefWidth="178.0" text="Length" />
+                                                            <TableColumn fx:id="heightCovers_Column" prefWidth="190.0" text="Heght" />
+                                                            <TableColumn fx:id="widthCovers_Column" prefWidth="250.0" text="Width" />
+                                                        </columns>
+                                                    </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="choseCover_Tab1" text="Предложенные лотки">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="279.0">
+                                 <children>
+                                    <HBox prefHeight="457.0" prefWidth="1046.0">
+                                       <children>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="189.0">
+                                             <children>
+                                                <Pane layoutX="3.0" layoutY="14.0" prefHeight="46.0" prefWidth="170.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="142.0" text="Heigth" />
+                                                      <ComboBox fx:id="height_CB1" editable="true" layoutX="3.0" layoutY="20.0" onAction="#heightChose" prefHeight="25.0" prefWidth="135.0" />
+                                                      <Button fx:id="clearHeight_Button1" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearHeight_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="3.0" layoutY="60.0" prefHeight="46.0" prefWidth="170.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="142.0" text="Width" />
+                                                      <ComboBox fx:id="width_CB1" editable="true" layoutX="3.0" layoutY="20.0" onAction="#widthChose" prefHeight="25.0" prefWidth="135.0" />
+                                                      <Button fx:id="clearWidth_Button1" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearWidth_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="3.0" layoutY="106.0" prefHeight="46.0" prefWidth="170.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="142.0" text="Length" />
+                                                      <ComboBox fx:id="length_CB1" editable="true" layoutX="3.0" layoutY="20.0" onAction="#lengthChose" prefHeight="25.0" prefWidth="135.0" />
+                                                      <Button fx:id="clearLength_Button1" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearLength_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                   </children>
+                                                </Pane>
+                                                <Button fx:id="chooseCover_Button1" layoutX="39.0" layoutY="193.0" mnemonicParsing="false" onAction="#coverChose" text="Choose selected" />
+                                             </children>
+                                          </AnchorPane>
+                                          <TableView fx:id="covers_TableView1" prefHeight="457.0" prefWidth="858.0">
+                                             <columns>
+                                                <TableColumn fx:id="articulCovers_Column1" prefWidth="105.0" text="Articul" />
+                                                <TableColumn fx:id="massCovers_Column1" prefWidth="139.0" text="Mass" />
+                                                <TableColumn fx:id="lengthCovers_Column1" prefWidth="178.0" text="Length" />
+                                                <TableColumn fx:id="heightCovers_Column1" prefWidth="190.0" text="Heght" />
+                                                <TableColumn fx:id="widthCovers_Column1" prefWidth="250.0" text="Width" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                      </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="241.0" prefWidth="775.0">
+                      <children>
+                  <VBox prefHeight="238.0" prefWidth="834.0">
+                     <children>
+                        <AnchorPane prefHeight="242.0" prefWidth="583.0">
+                           <children>
+                                      <ComboBox fx:id="snowLoads_CB" editable="true" layoutX="175.0" layoutY="33.0" onAction="#regionChose" prefWidth="150.0" />
+                                      <Label fx:id="region_Label" layoutX="175.0" layoutY="14.0" prefHeight="17.0" prefWidth="99.0" text="Region chose" />
+                                      <ComboBox fx:id="cities_CB" editable="true" layoutX="14.0" layoutY="33.0" onAction="#citiesChose" prefWidth="150.0" />
+                                      <Button fx:id="test_Button" layoutX="369.0" layoutY="33.0" mnemonicParsing="false" onAction="#test_Click" text="Button" />
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="77.0" text="Cities chose" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="238.0" prefWidth="732.0" />
+                      </children>
+                  </HBox>
+              </children>
+          </VBox>
+      </children>
+  </AnchorPane>

@@ -4,24 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="all write">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="add cables">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CablesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Cables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/CablesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cables.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TestTableDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TestTableDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/TestTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TestTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/TestTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TestTableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AutoCompleteComboBoxListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllerUtils/AutoCompleteComboBoxListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Cover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Cover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Practice-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/TestTableDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/TestTableDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AutoCompleteComboBoxListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/TestTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/TestTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TestTableService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TestTableService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" afterDir="false" />
+    </list>
+    <list id="f87b270f-eff0-42c7-953b-f2c99b2ecd2c" name="Revert &quot;cover table&quot;" comment="Revert &quot;cover table&quot;&#10;&#10;This reverts commit 5d1dd850">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +41,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,12 +91,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Practice\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Practice\src\main\java" />
+      <recent name="C:\Users\User\IdeaProjects\Practice\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Practice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -96,20 +118,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Practice" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -177,53 +192,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
     <MESSAGE value="all write" />
-    <option name="LAST_COMMIT_MESSAGE" value="all write" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="739" y="396" width="487" height="199" key="#Assign_Data_Sources" timestamp="1625839594200">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="739" y="396" width="487" height="199" key="#Assign_Data_Sources/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625839594200" />
-    <state x="432" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625840419611">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="432" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625840419611" />
-    <state x="645" y="188" key="#com.intellij.ide.util.MemberChooser" timestamp="1625841496716">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="645" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625841496716" />
-    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1625839307669">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625839307669" />
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1625841938609">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625841938609" />
-    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1625841938609">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625841938609" />
-    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1625841938609">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625841938609" />
-    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1625841938609">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625841938609" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1625840595441">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625840595441" />
-    <state x="594" y="299" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1625839544030">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="594" y="299" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625839544030" />
-    <state x="222" y="125" key="new project wizard" timestamp="1625840323297">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="222" y="125" key="new project wizard/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1625840323297" />
+    <MESSAGE value="add cables" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -241,6 +211,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/models/TestTable.java</url>
           <line>16</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Controller.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
