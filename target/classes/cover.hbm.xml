@@ -6,7 +6,10 @@
         <id name="id" type="int" column="id">
         </id>
         <property name="mass" type="int" column="mass"/>
-        <property name="title_display" type="string" column="title_display"/>
-        <property name="construction_id" type="int" column="construction_id"/>
+        <property name="length" type="int" column="length"/>
+        <property name="height" type="int" column="height"/>
+        <property name="width" type="int" column="width"/>
+        <property name="articul_new" type="string" column="articul_new"/>
+        <property name="title_new" type="string" column="title_new"/>
     </class>
 </hibernate-mapping>
