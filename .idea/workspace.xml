@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="add cables">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CablesDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Cables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/CablesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cables.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AutoCompleteComboBoxListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllerUtils/AutoCompleteComboBoxListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Cover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Cover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AutoCompleteComboBoxListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" afterDir="false" />
-    </list>
-    <list id="f87b270f-eff0-42c7-953b-f2c99b2ecd2c" name="Revert &quot;cover table&quot;" comment="Revert &quot;cover table&quot;&#10;&#10;This reverts commit 5d1dd850">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller.class" afterDir="false" />
-    </list>
+    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="add cables" />
+    <list id="f87b270f-eff0-42c7-953b-f2c99b2ecd2c" name="Revert &quot;cover table&quot;" comment="Revert &quot;cover table&quot;&#10;&#10;This reverts commit 5d1dd850" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
