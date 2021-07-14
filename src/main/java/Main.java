@@ -11,7 +11,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Voronov 6303 Practice");
-        primaryStage.setScene(new Scene(root, 470, 380));
+        primaryStage.setScene(new Scene(root, 775,550));
         primaryStage.show();
     }
 

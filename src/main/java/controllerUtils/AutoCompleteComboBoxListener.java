@@ -1,8 +1,9 @@
+package controllerUtils;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
@@ -39,6 +40,7 @@ public class AutoCompleteComboBoxListener<T> implements EventHandler<KeyEvent> {
         } else if (event.getCode() == KeyCode.BACK_SPACE) {
             moveCaretToPos = true;
             caretPos = comboBox.getEditor().getCaretPosition();
+
         } else if (event.getCode() == KeyCode.DELETE) {
             moveCaretToPos = true;
             caretPos = comboBox.getEditor().getCaretPosition();
@@ -53,7 +55,7 @@ public class AutoCompleteComboBoxListener<T> implements EventHandler<KeyEvent> {
         ObservableList<T> list = FXCollections.observableArrayList();
         for (T datum : data) {
             if (datum.toString().toLowerCase().startsWith(
-                    //AutoCompleteComboBoxListener.this.comboBox.getEditor().getText().toLowerCase().trim())) {
+                    //controllerUtils.AutoCompleteComboBoxListener.this.comboBox.getEditor().getText().toLowerCase().trim())) {
                     comboBox.getEditor().getText().toLowerCase().trim())) {
                 list.add(datum);
             }

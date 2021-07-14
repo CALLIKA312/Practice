@@ -46,4 +46,14 @@ public class Cover {
     public void setConstruction_id(int construction_id) {
         this.construction_id = construction_id;
     }
+
+    @Override
+    public String toString() {
+        return "Cover{" +
+                "id=" + id +
+                ", mass=" + mass +
+                ", title_display='" + title_display + '\'' +
+                ", construction_id=" + construction_id +
+                '}';
+    }
 }
