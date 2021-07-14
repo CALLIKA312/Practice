@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 import models.Cities;
 import models.Cover;
 import models.Regions;
@@ -37,15 +38,10 @@ public class Controller {
 
     public ComboBox<Integer> construction_CB;
     public ComboBox<Integer> mass_CB;
+    public Pane cover_Pane;
 
     CoverFilter coverFilter = new CoverFilter();
     Cover choseCover;
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     public void initialize() {
@@ -73,7 +69,6 @@ public class Controller {
         new AutoCompleteComboBoxListener<>(mass_CB);
 
     }
-
 
     public void citiesChose(ActionEvent actionEvent) {
         int regionId = cities_CB.getValue().getRegion_id();
@@ -109,16 +104,9 @@ public class Controller {
         return arrayList;
     }
 
-    boolean testClicked = false;
 
     public void test_Click(ActionEvent actionEvent) {
-        if (testClicked) {
-            cables_SP.visibleProperty().setValue(true);
-            testClicked = false;
-        } else {
-            cables_SP.visibleProperty().setValue(false);
-            testClicked = true;
-        }
+        cover_Pane.setVisible(true);
     }
 
     public void constructionChose(ActionEvent actionEvent) {
@@ -147,7 +135,7 @@ public class Controller {
         Cover curCover = mainTable_TableView.getSelectionModel().getSelectedItem();
         if (curCover != null) {
             choseCover = curCover;
-            region_Label.setText(choseCover.getTitle_display());
+            cover_Pane.setVisible(false);
         }
     }
 }
