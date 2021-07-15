@@ -47,7 +47,6 @@ public class CoverFilter {
     public void setConstructionValueWithUpdate(int constructionValue) {
         this.constructionValue = constructionValue;
         ignoreConstructionValue = constructionValue == Integer.MAX_VALUE;
-        getFiltered();
     }
 
     public int getMassValue() {
@@ -61,24 +60,7 @@ public class CoverFilter {
     public void setMassValueWithUpdate(int massValue) {
         this.massValue = massValue;
         ignoreMassValue = massValue == Integer.MAX_VALUE;
-        getFiltered();
     }
 
-    public void getFiltered() {
-        if (ignoreConstructionValue && ignoreMassValue) {
-            tableView.setItems(FXCollections.observableArrayList(data));
-            return;
-        }
-        ArrayList<Cover> newData = new ArrayList<>();
-        for (Cover cover : data) {
-            if (!ignoreConstructionValue && ignoreMassValue && cover.getConstruction_id() == constructionValue)
-                newData.add(cover);
-            else if (ignoreConstructionValue && !ignoreMassValue && cover.getMass() == massValue)
-                newData.add(cover);
-            else if (cover.getConstruction_id() == constructionValue && cover.getMass() == massValue)
-                newData.add(cover);
-        }
-        tableView.setItems(FXCollections.observableArrayList(newData));
-    }
 
 }

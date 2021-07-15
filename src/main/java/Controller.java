@@ -1,16 +1,17 @@
 import controllerUtils.AutoCompleteComboBoxListener;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.Pane;
 import models.Cables;
 import models.Cities;
 import models.Cover;
 import models.Regions;
 import services.*;
 
+import java.sql.Struct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +21,27 @@ import static controllerUtils.CollectionsUtil.getFilteredList;
 public class Controller {
 
 
-    public Pane cover_Pane;
+    public TabPane mainTabPane;
+    public Tab Cable_Tab;
+    public Tab Cover_Tab;
+
+    public TableView<Cables> cables_TableView;
+    public TableColumn<Cables, String> articulCables_Column;
+    public TableColumn<Cables, Integer> diametrCabeles_Column;
+    public TableColumn<Cables, Integer> massCables_Column;
+    public TableColumn<Cables, String> voltageCables_Column;
+
+
+    public ComboBox<String> articulCables_CB;
+    public ComboBox<Integer> massCables_CB;
+
+    public TableView<Cables> choseCables_TableView;
+    public TableColumn<Cables, String> choseCablesArticul_Column;
+    public TableColumn<Cables, Integer> massChoseCables_Column;
+
+
     public TableView<Cover> covers_TableView;
-    public TableColumn<Cover, Integer> articulCovers_Column;
+    public TableColumn<Cover, Integer> articul_newCovers_Column;
     public TableColumn<Cover, Integer> massCovers_Column;
     public TableColumn<Cover, String> lengthCovers_Column;
     public TableColumn<Cover, Integer> heightCovers_Column;
@@ -35,27 +54,13 @@ public class Controller {
 
     public ComboBox<Cities> cities_CB;
     public Label region_Label;
-    public List<Regions> regionsList = RegionsService.getAll();
     public ComboBox<Object> snowLoads_CB;
-    public Button test_Button;
+    public Button chooseCity_Button;
 
 
-    public TableView<Cables> cables_TableView;
-    public TableColumn<Cables, String> articulCables_Column;
-    public TableColumn<Cables, Integer> diametrCabeles_Column;
-    public TableColumn<Cables, Integer> massCables_Column;
-    public TableColumn<Cables, String> voltageCables_Column;
+    public Tab Trays_Tab;
 
-    public ComboBox<Integer> massCables_CB;
-
-    public TableView<Cables> choseCables_TableView;
-    public TableColumn<Cables, String> choseCablesArticul_Column;
-    public TableColumn<Cables, Integer> massChoseCables_Column;
-    public TabPane mainTabPane;
-    public Tab choseCable_Tab;
-    public Tab choseCover_Tab;
-
-
+    List<Regions> regionsList;
     Cover choseCover;
     List<Cover> coverList;
     List<Cables> cablesList;
@@ -63,13 +68,29 @@ public class Controller {
     @FXML
     public void initialize() {
 
+
+        regionsList = RegionsService.getAll();
+
         cities_CB.setItems(FXCollections.observableArrayList(CitiesService.getAll()));
         new AutoCompleteComboBoxListener<>(cities_CB);
         snowLoads_CB.setItems(FXCollections.observableArrayList(SnowLoadsService.getAll()));
         new AutoCompleteComboBoxListener<>(snowLoads_CB);
 
+        articulCables_Column.setCellValueFactory(new PropertyValueFactory<>("articul"));
+        diametrCabeles_Column.setCellValueFactory(new PropertyValueFactory<>("diametr"));
+        massCables_Column.setCellValueFactory(new PropertyValueFactory<>("mass"));
+        voltageCables_Column.setCellValueFactory(new PropertyValueFactory<>("voltage"));
 
-        articulCovers_Column.setCellValueFactory(new PropertyValueFactory<>("articul"));
+        cablesList = CablesService.getAll();
+        cables_TableView.setItems(FXCollections.observableArrayList(cablesList));
+        massCables_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCablesMass(cablesList)));
+        articulCables_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCablesArticul(cablesList)));
+
+        choseCablesArticul_Column.setCellValueFactory(new PropertyValueFactory<>("articul"));
+        massChoseCables_Column.setCellValueFactory(new PropertyValueFactory<>("mass"));
+
+
+        articul_newCovers_Column.setCellValueFactory(new PropertyValueFactory<>("articul_new"));
         massCovers_Column.setCellValueFactory(new PropertyValueFactory<>("mass"));
         lengthCovers_Column.setCellValueFactory(new PropertyValueFactory<>("length"));
         heightCovers_Column.setCellValueFactory(new PropertyValueFactory<>("height"));
@@ -83,21 +104,6 @@ public class Controller {
         length_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCoverLength(coverList)));
         height_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCoverHeight(coverList)));
         width_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCoverWidth(coverList)));
-
-        articulCables_Column.setCellValueFactory(new PropertyValueFactory<>("articul_new"));
-        diametrCabeles_Column.setCellValueFactory(new PropertyValueFactory<>("diametr"));
-        massCables_Column.setCellValueFactory(new PropertyValueFactory<>("mass"));
-        voltageCables_Column.setCellValueFactory(new PropertyValueFactory<>("voltage"));
-
-
-        cablesList = CablesService.getAll();
-
-        cables_TableView.setItems(FXCollections.observableArrayList(cablesList));
-
-        massCables_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCablesMass(cablesList)));
-
-        choseCablesArticul_Column.setCellValueFactory(new PropertyValueFactory<>("articul"));
-        massChoseCables_Column.setCellValueFactory(new PropertyValueFactory<>("mass"));
 
 
     }
@@ -113,8 +119,31 @@ public class Controller {
         }
     }
 
+
+    public void regionChose(ActionEvent actionEvent) {
+        cities_CB.setValue(null);
+    }
+
+    boolean isCityLocked = false;
+
+    public void choseCityLock(ActionEvent actionEvent) {
+        if (isCityLocked) {
+            isCityLocked = false;
+            cities_CB.setEditable(true);
+            snowLoads_CB.setEditable(true);
+            chooseCity_Button.setText("Choose city");
+        } else {
+            isCityLocked = true;
+            cities_CB.setEditable(false);
+            snowLoads_CB.setEditable(false);
+            chooseCity_Button.setText("Unlocked choose");
+        }
+
+    }
+
+
     public void updateCablesTable() {
-        List<Cables> filteredList = getFilteredList(cablesList, massCables_CB);
+        List<Cables> filteredList = getFilteredList(cablesList, articulCables_CB.getValue(),massCables_CB.getValue());
         cables_TableView.setItems(FXCollections.observableArrayList(filteredList));
     }
 
@@ -128,21 +157,32 @@ public class Controller {
         return arrayList;
     }
 
-    public void regionChose(ActionEvent actionEvent) {
-        cities_CB.setValue(null);
-    }
 
-    public void test_Click(ActionEvent actionEvent) {
-        cover_Pane.setVisible(true);
+    private ArrayList<String> makeUniqueAndSortCablesArticul(List<Cables> notUniqueList){
+        ArrayList<String> arrayList = new ArrayList<>();
+        for (Cables cables: notUniqueList) {
+            if(!arrayList.contains(cables.getArticul())) arrayList.add(cables.getArticul());
+        }
+        arrayList.sort(String::compareTo);
+        return arrayList;
     }
 
 
     public void massCablesChose(ActionEvent actionEvent) {
-        updateCablesTable();
+        if (massCables_CB.getValue() != null) updateCablesTable();
     }
 
 
-    public void clearNumberOfCores_CB(ActionEvent actionEvent) {
+    public void clearMassCables_CB(ActionEvent actionEvent) {
+        massCables_CB.setValue(null);
+        updateCablesTable();
+    }
+
+    public void articulCablesChose(ActionEvent actionEvent) {
+       updateCablesTable();
+    }
+
+    public void clearArticulCables_CB(ActionEvent actionEvent) {
         massCables_CB.setValue(null);
         updateCablesTable();
     }
@@ -158,18 +198,23 @@ public class Controller {
     }
 
     public void goToCovers_Press(ActionEvent actionEvent) {
-        if (!choseCables_TableView.getItems().isEmpty()) {
+        if (choseCables_TableView.getItems().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Предупреждение");
+            alert.setHeaderText("Сначала нужно выбрать один или несколько проводов");
+            alert.showAndWait();
+        } else {
             SingleSelectionModel<Tab> selectionModel = mainTabPane.getSelectionModel();
-            selectionModel.select(choseCover_Tab);
+            selectionModel.select(Cover_Tab);
+            Cover_Tab.setDisable(false);
         }
     }
 
 
     public void updateCoversTable() {
-        List<Cover> filteredList = getFilteredList(coverList, length_CB.getValue(), width_CB.getValue(), height_CB.getValue());
+        List<Cover> filteredList = getFilteredList(coverList, height_CB.getValue(), width_CB.getValue(), length_CB.getValue());
         covers_TableView.setItems(FXCollections.observableList(filteredList));
     }
-
 
     private ArrayList<Integer> makeUniqueAndSortCoverLength(List<Cover> notUniqueList) {
         ArrayList<Integer> arrayList = new ArrayList<>();
@@ -203,6 +248,14 @@ public class Controller {
         Cover curCover = covers_TableView.getSelectionModel().getSelectedItem();
         if (curCover != null) {
             choseCover = curCover;
+            SingleSelectionModel<Tab> selectionModel = mainTabPane.getSelectionModel();
+            selectionModel.select(Cover_Tab);
+            Trays_Tab.setDisable(false);
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Предупреждение");
+            alert.setHeaderText("Сначала нужно выбрать крышку для лотка");
+            alert.showAndWait();
         }
     }
 
@@ -233,6 +286,7 @@ public class Controller {
         length_CB.setValue(null);
         updateCoversTable();
     }
+
 
 
 }
