@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="add cables" />
+    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_22_44__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_22_44__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_4_42__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_4_42__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Cover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Cover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Trays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Trays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/trays.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trays.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllerUtils/CollectionsUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllerUtils/CollectionsUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Trays.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Trays.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trays.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trays.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" afterDir="false" />
+    </list>
     <list id="f87b270f-eff0-42c7-953b-f2c99b2ecd2c" name="Revert &quot;cover table&quot;" comment="Revert &quot;cover table&quot;&#10;&#10;This reverts commit 5d1dd850" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,13 +107,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -107,6 +142,7 @@
       <workItem from="1625744562328" duration="106000" />
       <workItem from="1625810385728" duration="14315000" />
       <workItem from="1625839087629" duration="2975000" />
+      <workItem from="1626412353649" duration="21600000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1625726707599</created>
@@ -150,17 +186,25 @@
       <option name="project" value="LOCAL" />
       <updated>1625744638916</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="start day">
+      <created>1626412422544</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626412422544</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
     <MESSAGE value="all write" />
     <MESSAGE value="add cables" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cables" />
+    <MESSAGE value="start day" />
+    <option name="LAST_COMMIT_MESSAGE" value="start day" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -180,9 +224,14 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/models/TraysLoad.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Controller.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="20" />
+          <line>417</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -191,6 +240,11 @@
         <watch expression="HibernateSessionFactoryUtil.getSessionFactory()" language="JAVA" />
         <watch expression="configuration.buildSessionFactory(builder.build())" language="JAVA" />
         <watch expression="testTableList.get(curIndexInList).getIndex()" language="JAVA" />
+        <watch expression="traysList.stream().filter(lengthPredicate).filter(wightPredicate).filter(thicknessPredicate).collect(Collectors.toList())" language="JAVA" />
+        <watch expression="snowLoads_CB.getItems().get(cities_CB.getValue().getSnowarea() - 1)" language="JAVA" />
+        <watch expression="snowLoads_CB.getValue()" language="JAVA" />
+        <watch expression="snowLoads_CB.getValue().getLoad_n()" language="JAVA" />
+        <watch expression="snowLoads_CB" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

@@ -1,21 +1,18 @@
 import controllerUtils.AutoCompleteComboBoxListener;
+import controllerUtils.CollectionsUtil;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import models.Cables;
-import models.Cities;
-import models.Cover;
-import models.Regions;
+import javafx.scene.layout.Pane;
+import models.*;
 import services.*;
 
-import java.sql.Struct;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-
-import static controllerUtils.CollectionsUtil.getFilteredList;
 
 
 public class Controller {
@@ -44,26 +41,41 @@ public class Controller {
     public TableColumn<Cover, Integer> articul_newCovers_Column;
     public TableColumn<Cover, Integer> massCovers_Column;
     public TableColumn<Cover, String> lengthCovers_Column;
-    public TableColumn<Cover, Integer> heightCovers_Column;
+    public TableColumn<Cover, Integer> typeCovers_Column;
     public TableColumn<Cover, Integer> widthCovers_Column;
 
     public ComboBox<Integer> length_CB;
     public ComboBox<Integer> width_CB;
-    public ComboBox<Integer> height_CB;
+    public ComboBox<Integer> type_CB;
+
+    public Pane selectedCover_Pane;
+    public Label title_newCover_Label;
+    public Label formOfCover_Label;
+    public Label articul_newCover_Label;
+
+    public Tab Trays_Tab;
+
+    public TableColumn<Trays, String> articul_newTrays_Column;
+    public TableColumn<Trays, Integer> heightTrays_Column;
+    public TableColumn<Trays, Integer> widthTrays_Column;
+    public TableColumn<Trays, Integer> lengthTrays_Column;
+    public TableColumn<Trays, Integer> massTrays_Column;
+    public TableColumn<Trays, String> suitabilityTrays_Column;
 
 
     public ComboBox<Cities> cities_CB;
     public Label region_Label;
-    public ComboBox<Object> snowLoads_CB;
+    public ComboBox<SnowLoads> snowLoads_CB;
     public Button chooseCity_Button;
+    public TableView<Trays> trays_TableView;
 
-
-    public Tab Trays_Tab;
 
     List<Regions> regionsList;
-    Cover choseCover;
+    Cover choseCover = null;
     List<Cover> coverList;
     List<Cables> cablesList;
+    List<Trays> traysList;
+    List<TraysLoad> traysLoadList;
 
     @FXML
     public void initialize() {
@@ -93,7 +105,7 @@ public class Controller {
         articul_newCovers_Column.setCellValueFactory(new PropertyValueFactory<>("articul_new"));
         massCovers_Column.setCellValueFactory(new PropertyValueFactory<>("mass"));
         lengthCovers_Column.setCellValueFactory(new PropertyValueFactory<>("length"));
-        heightCovers_Column.setCellValueFactory(new PropertyValueFactory<>("height"));
+        typeCovers_Column.setCellValueFactory(new PropertyValueFactory<>("type"));
         widthCovers_Column.setCellValueFactory(new PropertyValueFactory<>("width"));
 
         coverList = CoverService.getAll();
@@ -102,8 +114,18 @@ public class Controller {
 
 
         length_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCoverLength(coverList)));
-        height_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCoverHeight(coverList)));
+        type_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCoverType(coverList)));
         width_CB.setItems(FXCollections.observableArrayList(makeUniqueAndSortCoverWidth(coverList)));
+
+        traysLoadList = TraysLoadService.getAll();
+
+        traysList = TraysService.getAll();
+        articul_newTrays_Column.setCellValueFactory(new PropertyValueFactory<>("articul_new"));
+        heightTrays_Column.setCellValueFactory(new PropertyValueFactory<>("height"));
+        widthTrays_Column.setCellValueFactory(new PropertyValueFactory<>("width"));
+        lengthTrays_Column.setCellValueFactory(new PropertyValueFactory<>("length"));
+        massTrays_Column.setCellValueFactory(new PropertyValueFactory<>("mass"));
+        suitabilityTrays_Column.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().suitability)));
 
 
     }
@@ -112,7 +134,8 @@ public class Controller {
         int regionId = cities_CB.getValue().getRegion_id();
         for (Regions region : regionsList) {
             if (region.getId() == regionId) {
-                snowLoads_CB.setValue(cities_CB.getValue().getSnowarea());
+
+                snowLoads_CB.setValue(snowLoads_CB.getItems().get(cities_CB.getValue().getSnowarea() - 1));
                 region_Label.setText(region.getName());
                 return;
             }
@@ -143,7 +166,7 @@ public class Controller {
 
 
     public void updateCablesTable() {
-        List<Cables> filteredList = getFilteredList(cablesList, articulCables_CB.getValue(),massCables_CB.getValue());
+        List<Cables> filteredList = CollectionsUtil.getFilteredListOfCables(cablesList, articulCables_CB.getValue(), massCables_CB.getValue());
         cables_TableView.setItems(FXCollections.observableArrayList(filteredList));
     }
 
@@ -158,10 +181,10 @@ public class Controller {
     }
 
 
-    private ArrayList<String> makeUniqueAndSortCablesArticul(List<Cables> notUniqueList){
+    private ArrayList<String> makeUniqueAndSortCablesArticul(List<Cables> notUniqueList) {
         ArrayList<String> arrayList = new ArrayList<>();
-        for (Cables cables: notUniqueList) {
-            if(!arrayList.contains(cables.getArticul())) arrayList.add(cables.getArticul());
+        for (Cables cables : notUniqueList) {
+            if (!arrayList.contains(cables.getArticul())) arrayList.add(cables.getArticul());
         }
         arrayList.sort(String::compareTo);
         return arrayList;
@@ -179,7 +202,7 @@ public class Controller {
     }
 
     public void articulCablesChose(ActionEvent actionEvent) {
-       updateCablesTable();
+        updateCablesTable();
     }
 
     public void clearArticulCables_CB(ActionEvent actionEvent) {
@@ -212,7 +235,7 @@ public class Controller {
 
 
     public void updateCoversTable() {
-        List<Cover> filteredList = getFilteredList(coverList, height_CB.getValue(), width_CB.getValue(), length_CB.getValue());
+        List<Cover> filteredList = CollectionsUtil.getFilteredListOfCovers(coverList, type_CB.getValue(), width_CB.getValue(), length_CB.getValue());
         covers_TableView.setItems(FXCollections.observableList(filteredList));
     }
 
@@ -225,10 +248,10 @@ public class Controller {
         return arrayList;
     }
 
-    private ArrayList<Integer> makeUniqueAndSortCoverHeight(List<Cover> notUniqueList) {
+    private ArrayList<Integer> makeUniqueAndSortCoverType(List<Cover> notUniqueList) {
         ArrayList<Integer> arrayList = new ArrayList<>();
         for (Cover cover : notUniqueList) {
-            if (!arrayList.contains(cover.getHeight())) arrayList.add(cover.getHeight());
+            if (!arrayList.contains(cover.getType())) arrayList.add(cover.getType());
         }
         arrayList.sort(Integer::compareTo);
         return arrayList;
@@ -248,10 +271,11 @@ public class Controller {
         Cover curCover = covers_TableView.getSelectionModel().getSelectedItem();
         if (curCover != null) {
             choseCover = curCover;
-            SingleSelectionModel<Tab> selectionModel = mainTabPane.getSelectionModel();
-            selectionModel.select(Cover_Tab);
-            Trays_Tab.setDisable(false);
-        }else{
+            title_newCover_Label.setText(choseCover.getTitle_new());
+            //formOfCover_Label.setText(choseCover.get);
+            articul_newCover_Label.setText(choseCover.getArticul_new());
+            selectedCover_Pane.setVisible(true);
+        } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Предупреждение");
             alert.setHeaderText("Сначала нужно выбрать крышку для лотка");
@@ -259,9 +283,10 @@ public class Controller {
         }
     }
 
-    public void heightChose(ActionEvent actionEvent) {
+    public void typeChose(ActionEvent actionEvent) {
         updateCoversTable();
     }
+
 
     public void widthChose(ActionEvent actionEvent) {
         updateCoversTable();
@@ -271,9 +296,8 @@ public class Controller {
         updateCoversTable();
     }
 
-
-    public void clearHeight_CB(ActionEvent actionEvent) {
-        height_CB.setValue(null);
+    public void clearType_CB(ActionEvent actionEvent) {
+        type_CB.setValue(null);
         updateCoversTable();
     }
 
@@ -287,6 +311,123 @@ public class Controller {
         updateCoversTable();
     }
 
+
+    public void calculatingBestTrays(ActionEvent actionEvent) {
+        if (choseCables_TableView.getItems().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Предупреждение");
+            alert.setHeaderText("Сначала нужно выбрать один или несколько проводов");
+            alert.showAndWait();
+        } else if (choseCover == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Предупреждение");
+            alert.setHeaderText("Сначала нужно выбрать крышку для лотка");
+            alert.showAndWait();
+        } else {
+
+            List<Trays> filteredList = CollectionsUtil.getFilteredListOfTrays(traysList, choseCover.getLength(), choseCover.getWidth(), choseCover.getThickness());
+
+
+            double snowFactor = 0;
+            int coverType = choseCover.getType();
+            switch (coverType) {
+                case 201:
+                case 215:
+                    snowFactor = 1;
+                    break;
+                case 204:
+                case 219:
+                    snowFactor = 0.85;
+                    break;
+                case 220:
+                    snowFactor = 0.45;
+                    break;
+            }
+            double cablesLoadPart = 0;
+            double snowLoadPart = (double) snowLoads_CB.getValue().getLoad_n() * snowFactor * ((double) choseCover.getLength() / 1000) * ((double) choseCover.getWidth() / 1000) / 100;
+            for (Cables cables : choseCables_TableView.getItems()) {
+                cablesLoadPart += (double) cables.getMass() * 9.8 * ((double) choseCover.getLength() / 1000) / 1000;
+            }
+            double coverLoadPart = choseCover.getMass() * 9.8;
+
+            double realCriticalLoad = snowLoadPart + cablesLoadPart + coverLoadPart;
+
+
+            ArrayList<Trays> resultTrays = new ArrayList<>();
+
+            for (Trays trays : filteredList) {
+                int height = trays.getHeight();
+                TraysLoad curTraysLoad = CollectionsUtil.getFilteredListOfTraysLoad(traysLoadList, trays.getType(), choseCover.getLength() / 1000, trays.getThickness());
+                System.out.println(curTraysLoad);
+                if (curTraysLoad == null) continue;
+                double curLoad = 0;
+                switch (height) {
+                    case 25:
+                        curLoad = curTraysLoad.getHi25();
+                        break;
+                    case 40:
+                        curLoad = curTraysLoad.getHi40();
+                        break;
+                    case 50:
+                        curLoad = curTraysLoad.getHi50();
+                        break;
+                    case 60:
+                        curLoad = curTraysLoad.getHi60();
+                        break;
+                    case 75:
+                        curLoad = curTraysLoad.getHi75();
+                        break;
+                    case 85:
+                        curLoad = curTraysLoad.getHi85();
+                        break;
+                    case 100:
+                        curLoad = curTraysLoad.getHi100();
+                        break;
+                    case 110:
+                        curLoad = curTraysLoad.getHi110();
+                        break;
+                    case 120:
+                        curLoad = curTraysLoad.getHi120();
+                        break;
+                    case 150:
+                        curLoad = curTraysLoad.getHi150();
+                        break;
+                    case 160:
+                        curLoad = curTraysLoad.getHi160();
+                        break;
+                    case 200:
+                        curLoad = curTraysLoad.getHi200();
+                        break;
+                    case 70:
+                        curLoad = curTraysLoad.getHi70();
+                        break;
+                    case 80:
+                        curLoad = curTraysLoad.getHi80();
+                        break;
+                    case 125:
+                        curLoad = curTraysLoad.getHi125();
+                        break;
+                    case 175:
+                        curLoad = curTraysLoad.getHi175();
+                        break;
+                }
+
+                curLoad *= 1000;
+                if (curLoad == 0) continue;
+                resultTrays.add(trays);
+                trays.suitability = realCriticalLoad / 0.7 / curLoad * 100;
+
+            }
+/*
+            resultTrays.sort(Comparator.comparing());
+            resultTrays = sortTraysLoad(resultTrays);*/
+
+            trays_TableView.setItems(FXCollections.observableArrayList(resultTrays));
+            SingleSelectionModel<Tab> selectionModel = mainTabPane.getSelectionModel();
+            selectionModel.select(Trays_Tab);
+            Trays_Tab.setDisable(false);
+        }
+    }
 
 
 }
