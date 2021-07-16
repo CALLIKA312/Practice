@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="models.Trays" table="trays">
+        <id name="id" type="int" column="id">
+        </id>
+        <property name="height" type="int" column="height"/>
+        <property name="width" type="int" column="width"/>
+        <property name="length" type="string" column="length"/>
+        <property name="cover_type_id" type="int" column="cover_type_id"/>
+        <property name="mass" type="string" column="mass"/>
+        <property name="articul_new" type="string" column="articul_new"/>
+    </class>
+</hibernate-mapping>

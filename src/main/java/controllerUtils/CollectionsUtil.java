@@ -15,27 +15,22 @@ public class CollectionsUtil {
     /**
      * метод для получения отфильтрованного списка крышек
      */
-    public static List<Cover> getFilteredList(List<Cover> coversList, Object length, Object width, Object height) {
+    public static List<Cover> getFilteredList(List<Cover> coversList, Object height, Object width, Object length) {
 
-        // передаваемые объекты могут быть null, поэтому нельзя сравнивать их напрямую со значением поля таблицы, проверяем с помощью instanceof
+        Predicate<Cover> heightPredicate = p -> p.getHeight() == (height != null ? Integer.parseInt(String.valueOf(height)) : p.getHeight());
 
-        Predicate<Cover> lengthPredicate = p -> p.getLength() == (length instanceof Integer ? (Integer) length : p.getLength());
+        Predicate<Cover> widthPredicate = p -> p.getWidth() == (width != null ? Integer.parseInt(String.valueOf(width)) : p.getWidth());
 
-        Predicate<Cover> widthPredicate = p -> p.getWidth() == (width instanceof Integer ? (Integer) width : p.getWidth());
+        Predicate<Cover> lengthPredicate = p -> p.getLength() == (length != null ? Integer.parseInt(String.valueOf(length)) : p.getLength());
 
-        Predicate<Cover> heightPredicate = p -> p.getHeight() == (height instanceof Integer ? (Integer) height : p.getHeight());
+        return coversList.stream().filter(heightPredicate).filter(widthPredicate).filter(lengthPredicate).collect(Collectors.toList());
 
-
-        List<Predicate<Cover>> predicates = Arrays.asList(lengthPredicate, widthPredicate, heightPredicate);
-
-        return coversList.stream().filter(p -> predicates.stream().allMatch(f -> f.test(p))).collect(Collectors.toList());
     }
 
 
-    public static List<Cables> getFilteredList(List<Cables> cablesList, Object mass) {
-        Predicate<Cables> numberOfCoresPredicate = p -> p.getMass() == (mass instanceof Integer ? (Integer) mass : p.getMass());
-        List<Predicate<Cables>> predicates = Collections.singletonList(numberOfCoresPredicate);
-
-        return cablesList.stream().filter(p -> predicates.stream().allMatch(f-> f.test(p))).collect(Collectors.toList());
+    public static List<Cables> getFilteredList(List<Cables> cablesList, Object articul, Object mass) {
+        Predicate<Cables> articulPredicate = p -> p.getArticul().equals(articul != null ? String.valueOf(articul) : p.getArticul());
+        Predicate<Cables> massPredicate = p -> p.getMass() == (mass != null ? Integer.parseInt(String.valueOf(mass)) : p.getMass());
+        return cablesList.stream().filter(articulPredicate).filter(massPredicate).collect(Collectors.toList());
     }
 }

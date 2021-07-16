@@ -22,6 +22,7 @@ public class HibernateSessionFactoryUtil {
                 configuration.addAnnotatedClass(SnowLoads.class);
                 configuration.addAnnotatedClass(Cover.class);
                 configuration.addAnnotatedClass(Cables.class);
+                configuration.addAnnotatedClass(Trays.class);
 
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());

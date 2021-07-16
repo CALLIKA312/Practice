@@ -12,7 +12,7 @@
                       <children>
                   <TabPane fx:id="mainTabPane" prefHeight="476.0" prefWidth="1055.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                      <Tab fx:id="choseCable_Tab" text="Выбор провода">
+                      <Tab fx:id="Cable_Tab" text="Выбор провода">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -24,14 +24,21 @@
                                                    <children>
                                                       <Pane layoutX="3.0" layoutY="14.0" prefHeight="46.0" prefWidth="170.0">
                                                          <children>
-                                                            <Label prefHeight="17.0" prefWidth="142.0" text="Mass" />
-                                                            <ComboBox fx:id="massCables_CB" editable="true" layoutX="3.0" layoutY="20.0" onAction="#massCablesChose" prefHeight="25.0" prefWidth="135.0" />
-                                                            <Button fx:id="clearMassCables_Button" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearNumberOfCores_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                            <Label prefHeight="17.0" prefWidth="142.0" text="Articul" />
+                                                            <ComboBox fx:id="articulCables_CB" editable="true" layoutX="3.0" layoutY="20.0" onAction="#articulCablesChose" prefHeight="25.0" prefWidth="135.0" />
+                                                            <Button fx:id="clearArticulCables_Button" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearArticulCables_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
                                                          </children>
                                                       </Pane>
-                                                      <Button fx:id="chooseCabel_Button" layoutX="44.0" layoutY="78.0" mnemonicParsing="false" onAction="#cabelChose" text="Choose selected" />
-                                                      <Button fx:id="goToCovers_Button" layoutX="53.0" layoutY="119.0" mnemonicParsing="false" onAction="#goToCovers_Press" text="Go to Covers" />
-                                                      <Button fx:id="deleteChosenCable_Button" layoutX="49.0" layoutY="159.0" mnemonicParsing="false" onAction="#deleteChosenCable" text="Delete chosen" />
+                                                      <Pane layoutX="3.0" layoutY="60.0" prefHeight="46.0" prefWidth="170.0">
+                                                         <children>
+                                                            <Label prefHeight="17.0" prefWidth="142.0" text="Mass" />
+                                                            <ComboBox fx:id="massCables_CB" editable="true" layoutX="3.0" layoutY="20.0" onAction="#massCablesChose" prefHeight="25.0" prefWidth="135.0" />
+                                                            <Button fx:id="clearMassCables_Button" cancelButton="true" layoutX="141.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearMassCables_CB" prefHeight="25.0" prefWidth="28.0" text="×" textAlignment="CENTER" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Button fx:id="chooseCabel_Button" layoutX="43.0" layoutY="115.0" mnemonicParsing="false" onAction="#cabelChose" text="Choose selected" />
+                                                      <Button fx:id="goToCovers_Button" layoutX="53.0" layoutY="150.0" mnemonicParsing="false" onAction="#goToCovers_Press" text="Go to Covers" />
+                                                      <Button fx:id="deleteChosenCable_Button" layoutX="50.0" layoutY="185.0" mnemonicParsing="false" onAction="#deleteChosenCable" text="Delete chosen" />
                                                    </children>
                                                 </AnchorPane>
                                                 <Pane prefHeight="233.0" prefWidth="191.0">
@@ -60,7 +67,7 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                      <Tab fx:id="choseCover_Tab" text="Выбор крышки">
+                      <Tab fx:id="Cover_Tab" disable="true" text="Выбор крышки">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="279.0">
                                  <children>
@@ -94,11 +101,11 @@
                                                       </AnchorPane>
                                                     <TableView fx:id="covers_TableView" prefHeight="457.0" prefWidth="858.0">
                                                         <columns>
-                                                            <TableColumn fx:id="articulCovers_Column" prefWidth="105.0" text="Articul" />
+                                                            <TableColumn fx:id="articul_newCovers_Column" prefWidth="105.0" text="Articul" />
                                                             <TableColumn fx:id="massCovers_Column" prefWidth="139.0" text="Mass" />
-                                                            <TableColumn fx:id="lengthCovers_Column" prefWidth="178.0" text="Length" />
                                                             <TableColumn fx:id="heightCovers_Column" prefWidth="190.0" text="Heght" />
                                                             <TableColumn fx:id="widthCovers_Column" prefWidth="250.0" text="Width" />
+                                                            <TableColumn fx:id="lengthCovers_Column" prefWidth="178.0" text="Length" />
                                                         </columns>
                                                     </TableView>
                                        </children>
@@ -107,7 +114,7 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                        <Tab fx:id="choseCover_Tab1" text="Предложенные лотки">
+                        <Tab fx:id="Trays_Tab" disable="true" text="Предложенные лотки">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="279.0">
                                  <children>
@@ -167,7 +174,7 @@
                                       <ComboBox fx:id="snowLoads_CB" editable="true" layoutX="175.0" layoutY="33.0" onAction="#regionChose" prefWidth="150.0" />
                                       <Label fx:id="region_Label" layoutX="175.0" layoutY="14.0" prefHeight="17.0" prefWidth="99.0" text="Region chose" />
                                       <ComboBox fx:id="cities_CB" editable="true" layoutX="14.0" layoutY="33.0" onAction="#citiesChose" prefWidth="150.0" />
-                                      <Button fx:id="test_Button" layoutX="369.0" layoutY="33.0" mnemonicParsing="false" onAction="#test_Click" text="Button" />
+                                      <Button fx:id="chooseCity_Button" layoutX="369.0" layoutY="33.0" mnemonicParsing="false" onAction="#choseCityLock" text="Choose city" />
                               <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="77.0" text="Cities chose" />
                            </children>
                         </AnchorPane>
