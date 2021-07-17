@@ -23,14 +23,12 @@ public class Controller {
 
     public TabPane mainTabPane;
     public Tab Cable_Tab;
-    public Tab Cover_Tab;
 
     public TableView<Cables> cables_TableView;
     public TableColumn<Cables, String> articulCables_Column;
     public TableColumn<Cables, Integer> diametrCabeles_Column;
     public TableColumn<Cables, Integer> massCables_Column;
     public TableColumn<Cables, String> voltageCables_Column;
-
 
     public ComboBox<String> articulCables_CB;
     public ComboBox<Integer> massCables_CB;
@@ -39,6 +37,8 @@ public class Controller {
     public TableColumn<Cables, String> choseCablesArticul_Column;
     public TableColumn<Cables, Integer> massChoseCables_Column;
 
+
+    public Tab Cover_Tab;
 
     public TableView<Cover> covers_TableView;
     public TableColumn<Cover, Integer> articul_newCovers_Column;
@@ -51,12 +51,10 @@ public class Controller {
     public ComboBox<Integer> width_CB;
     public ComboBox<Integer> height_CB;
 
-
     public ComboBox<Cities> cities_CB;
     public Label region_Label;
     public ComboBox<Object> snowLoads_CB;
     public Button chooseCity_Button;
-
 
     public Tab Trays_Tab;
 

@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="add cables" />
+    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="add trays">
+      <change beforePath="$PROJECT_DIR$/.idea/Practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Practice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2021_14_53__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2021_14_53__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_02__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_02__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sample.fxml" afterDir="false" />
+    </list>
     <list id="f87b270f-eff0-42c7-953b-f2c99b2ecd2c" name="Revert &quot;cover table&quot;" comment="Revert &quot;cover table&quot;&#10;&#10;This reverts commit 5d1dd850" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,22 +89,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Practice\src\main\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Practice\src\main\java" />
       <recent name="C:\Users\User\IdeaProjects\Practice\src\main\resources" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\CALLIKA\IdeaProjects\Practice\src\main\resources" />
+      <recent name="C:\Users\User\IdeaProjects\Practice\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Practice" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -96,13 +110,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Practice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -118,6 +139,10 @@
       <workItem from="1625744562328" duration="106000" />
       <workItem from="1625810385728" duration="14315000" />
       <workItem from="1625839087629" duration="2975000" />
+      <workItem from="1626348746729" duration="10408000" />
+      <workItem from="1626362699548" duration="151000" />
+      <workItem from="1626376904636" duration="899000" />
+      <workItem from="1626531729419" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1625726707599</created>
@@ -161,17 +186,90 @@
       <option name="project" value="LOCAL" />
       <updated>1625744638916</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add trays">
+      <created>1626362892516</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626362892516</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
     <MESSAGE value="all write" />
     <MESSAGE value="add cables" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cables" />
+    <MESSAGE value="add trays" />
+    <option name="LAST_COMMIT_MESSAGE" value="add trays" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="739" y="396" width="419" height="229" key="#Assign_Data_Sources" timestamp="1626289047084">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="739" y="396" width="419" height="229" key="#Assign_Data_Sources/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626289047084" />
+    <state x="645" y="205" key="#com.intellij.ide.util.MemberChooser" timestamp="1626360310194">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="645" y="205" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626360310194" />
+    <state x="623" y="399" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626360337919">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="623" y="399" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626360337919" />
+    <state x="341" y="73" key="CommitChangelistDialog2" timestamp="1626376936209">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="73" key="CommitChangelistDialog2/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626376936209" />
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1626377809677">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
+    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1626377809677">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
+    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1626377809677">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1626377809677">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1626377809674">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
+    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1626377809674">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
+    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1626377809674">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
+    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1626377809674">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
+    <state x="432" y="237" key="Vcs.Push.Dialog.v2" timestamp="1626376950165">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="432" y="237" key="Vcs.Push.Dialog.v2/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626376950165" />
+    <state x="92" y="92" width="1496" height="826" key="dock-window-1" timestamp="1626360424102">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="92" y="92" width="1496" height="826" key="dock-window-1/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626360424102" />
+    <state x="570" y="265" key="extract.method.dialog" timestamp="1626354328315">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="570" y="265" key="extract.method.dialog/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626354328315" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -190,10 +288,13 @@
           <line>16</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Controller.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="20" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java</url>
+          <line>17</line>
+          <properties class="controllerUtils.CollectionsUtil" method="getFilteredList">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -201,7 +302,9 @@
       <configuration name="Application">
         <watch expression="HibernateSessionFactoryUtil.getSessionFactory()" language="JAVA" />
         <watch expression="configuration.buildSessionFactory(builder.build())" language="JAVA" />
-        <watch expression="testTableList.get(curIndexInList).getIndex()" language="JAVA" />
+        <watch expression="Integer ? (Integer) length : p.getLength()" language="JAVA" />
+        <watch expression="length_CB.getValue(), width_CB.getValue(), height_CB.getValue()" language="JAVA" />
+        <watch expression="coversList.stream().filter(p -&gt; predicates.stream().allMatch(f -&gt; f.test(p))).collect(Collectors.toList())" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
