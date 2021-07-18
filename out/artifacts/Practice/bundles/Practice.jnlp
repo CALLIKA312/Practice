@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Practice.jnlp">
+  <information>
+    <title>Practice</title>
+    <vendor>Unknown</vendor>
+    <description>Practice</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Practice.jar" size="40222" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="src\main\java\Main.java"  name="Practice" />
+  <update check="background"/>
+</jnlp>

@@ -4,26 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="add trays">
-      <change beforePath="$PROJECT_DIR$/.idea/Practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Practice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="06fc5c2c-a330-47aa-8b83-56cfcb46a299" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/TraysLoadDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/TraysLoad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/TraysLoadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/traysLoad.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/69f16fee-0430-45fb-943c-126f8651e3e5/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed07fbdc-57ac-4644-81da-ec75a7b2b2a7/storage_v2/_src_/database/practiceTest.bST4BA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2021_14_53__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2021_14_53__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_00__Default_Changelist_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_02__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2021_9_02__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cables.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databaseSQL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Cities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Cover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Cover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Trays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Trays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HibernateSessionFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cover.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/trays.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trays.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllerUtils/CollectionsUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllerUtils/CollectionsUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cover.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cover.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Cities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Cities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Cover.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Cover.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Trays.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Trays.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trays.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trays.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/HibernateSessionFactoryUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <list id="f87b270f-eff0-42c7-953b-f2c99b2ecd2c" name="Revert &quot;cover table&quot;" comment="Revert &quot;cover table&quot;&#10;&#10;This reverts commit 5d1dd850" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Practice_jar/Practice.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,9 +99,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -94,18 +111,19 @@
       <recent name="C:\Users\User\IdeaProjects\Practice\src\main\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\CALLIKA\IdeaProjects\Practice\src\main\resources" />
       <recent name="C:\Users\User\IdeaProjects\Practice\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,10 +157,8 @@
       <workItem from="1625744562328" duration="106000" />
       <workItem from="1625810385728" duration="14315000" />
       <workItem from="1625839087629" duration="2975000" />
-      <workItem from="1626348746729" duration="10408000" />
-      <workItem from="1626362699548" duration="151000" />
-      <workItem from="1626376904636" duration="899000" />
-      <workItem from="1626531729419" duration="704000" />
+      <workItem from="1626412353649" duration="21600000" />
+      <workItem from="1626609888548" duration="11987000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1625726707599</created>
@@ -186,12 +202,12 @@
       <option name="project" value="LOCAL" />
       <updated>1625744638916</updated>
     </task>
-    <task id="LOCAL-00007" summary="add trays">
-      <created>1626362892516</created>
+    <task id="LOCAL-00007" summary="start day">
+      <created>1626412422544</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1626362892516</updated>
+      <updated>1626412422544</updated>
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
@@ -206,70 +222,70 @@
     <MESSAGE value="123" />
     <MESSAGE value="all write" />
     <MESSAGE value="add cables" />
-    <MESSAGE value="add trays" />
-    <option name="LAST_COMMIT_MESSAGE" value="add trays" />
+    <MESSAGE value="start day" />
+    <option name="LAST_COMMIT_MESSAGE" value="start day" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="739" y="396" width="419" height="229" key="#Assign_Data_Sources" timestamp="1626289047084">
+    <state x="294" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626616081066">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="739" y="396" width="419" height="229" key="#Assign_Data_Sources/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626289047084" />
-    <state x="645" y="205" key="#com.intellij.ide.util.MemberChooser" timestamp="1626360310194">
+    <state x="294" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626616081066" />
+    <state x="569" y="294" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1626614378264">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="645" y="205" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626360310194" />
-    <state x="623" y="399" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626360337919">
+    <state x="569" y="294" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626614378264" />
+    <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626613724012">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="623" y="399" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626360337919" />
-    <state x="341" y="73" key="CommitChangelistDialog2" timestamp="1626376936209">
+    <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626613724012" />
+    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1626611872025">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="341" y="73" key="CommitChangelistDialog2/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626376936209" />
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1626377809677">
+    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626611872025" />
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1626623838989">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
-    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1626377809677">
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626623838989" />
+    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1626623838988">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
-    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1626377809677">
+    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626623838988" />
+    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1626623838988">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
-    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1626377809677">
+    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626623838988" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1626623838989">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809677" />
-    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1626377809674">
+    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626623838989" />
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1626616801524">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
-    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1626377809674">
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626616801524" />
+    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1626616801524">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
-    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1626377809674">
+    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626616801524" />
+    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1626616801523">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
-    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1626377809674">
+    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626616801523" />
+    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1626616801524">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626377809674" />
-    <state x="432" y="237" key="Vcs.Push.Dialog.v2" timestamp="1626376950165">
+    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626616801524" />
+    <state x="728" y="372" width="788" height="372" key="MultipleFileMergeDialog" timestamp="1626534057321">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="237" key="Vcs.Push.Dialog.v2/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626376950165" />
-    <state x="92" y="92" width="1496" height="826" key="dock-window-1" timestamp="1626360424102">
+    <state x="728" y="372" width="788" height="372" key="MultipleFileMergeDialog/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626534057321" />
+    <state x="392" y="121" key="SettingsEditor" timestamp="1626615056144">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="92" y="92" width="1496" height="826" key="dock-window-1/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626360424102" />
-    <state x="570" y="265" key="extract.method.dialog" timestamp="1626354328315">
+    <state x="392" y="121" key="SettingsEditor/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626615056144" />
+    <state x="644" y="373" key="classpath-attribute-editor" timestamp="1626614384805">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="570" y="265" key="extract.method.dialog/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626354328315" />
+    <state x="644" y="373" key="classpath-attribute-editor/0.0.1680.1010/-1024.280.962.768@0.0.1680.1010" timestamp="1626614384805" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -288,13 +304,15 @@
           <line>16</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/controllerUtils/CollectionsUtil.java</url>
-          <line>17</line>
-          <properties class="controllerUtils.CollectionsUtil" method="getFilteredList">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="30" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/models/TraysLoad.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Controller.java</url>
+          <line>369</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -302,9 +320,12 @@
       <configuration name="Application">
         <watch expression="HibernateSessionFactoryUtil.getSessionFactory()" language="JAVA" />
         <watch expression="configuration.buildSessionFactory(builder.build())" language="JAVA" />
-        <watch expression="Integer ? (Integer) length : p.getLength()" language="JAVA" />
-        <watch expression="length_CB.getValue(), width_CB.getValue(), height_CB.getValue()" language="JAVA" />
-        <watch expression="coversList.stream().filter(p -&gt; predicates.stream().allMatch(f -&gt; f.test(p))).collect(Collectors.toList())" language="JAVA" />
+        <watch expression="testTableList.get(curIndexInList).getIndex()" language="JAVA" />
+        <watch expression="traysList.stream().filter(lengthPredicate).filter(wightPredicate).filter(thicknessPredicate).collect(Collectors.toList())" language="JAVA" />
+        <watch expression="snowLoads_CB.getItems().get(cities_CB.getValue().getSnowarea() - 1)" language="JAVA" />
+        <watch expression="snowLoads_CB.getValue()" language="JAVA" />
+        <watch expression="snowLoads_CB.getValue().getLoad_n()" language="JAVA" />
+        <watch expression="snowLoads_CB" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

@@ -3,6 +3,7 @@ package models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "trays", schema = "public")
@@ -17,9 +18,13 @@ public class Trays {
     private int height;
     private int width;
     private int length;
-    private int cover_type_id;
+    private double thickness;
     private int mass;
     private String articul_new;
+    private int type;
+
+    @Transient
+    public double suitability;
 
     public Trays() {
     }
@@ -48,12 +53,12 @@ public class Trays {
         this.length = length;
     }
 
-    public int getCover_type_id() {
-        return cover_type_id;
+    public double getThickness() {
+        return thickness;
     }
 
-    public void setCover_type_id(int cover_type_id) {
-        this.cover_type_id = cover_type_id;
+    public void setThickness(double thickness) {
+        this.thickness = thickness;
     }
 
     public int getMass() {
@@ -72,6 +77,14 @@ public class Trays {
         this.articul_new = articul_new;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Trays{" +
@@ -79,7 +92,7 @@ public class Trays {
                 ", height=" + height +
                 ", width=" + width +
                 ", length=" + length +
-                ", cover_type_id=" + cover_type_id +
+                ", cover_type_id=" + thickness +
                 ", mass=" + mass +
                 ", articul_new='" + articul_new + '\'' +
                 '}';

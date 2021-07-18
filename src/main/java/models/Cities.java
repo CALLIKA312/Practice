@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Cities", schema = "public")
+@Table(name = "cities", schema = "public")
 public class Cities {
     @Id
     private int id;
@@ -15,13 +15,9 @@ public class Cities {
         return id;
     }
 
-    @Column(name = "city")
     private String city;
-    @Column(name = "region_id")
     private int region_id;
-    @Column(name = "snowarea")
     private int snowarea;
-    @Column(name = "windarea")
     private int windarea;
 
 

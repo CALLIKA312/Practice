@@ -3,10 +3,6 @@ package models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 @Entity
 @Table(name = "cover", schema = "public")
@@ -22,13 +18,15 @@ public class Cover {
 
     private int length;
 
-    private int height;
+    private int type;
 
     private int width;
 
+    private double thickness;
+
     private String articul_new;
 
-    private String  title_new;
+    private String title_new;
 
 
     public Cover() {
@@ -50,12 +48,12 @@ public class Cover {
         this.length = length;
     }
 
-    public int getHeight() {
-        return height;
+    public int getType() {
+        return type;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    public void setType(int height) {
+        this.type = height;
     }
 
     public int getWidth() {
@@ -82,15 +80,25 @@ public class Cover {
         this.title_new = title_new;
     }
 
+    public double getThickness() {
+        return thickness;
+    }
+
+    public void setThickness(double thickness) {
+        this.thickness = thickness;
+    }
+
     @Override
     public String toString() {
         return "Cover{" +
                 "id=" + id +
                 ", mass=" + mass +
                 ", length=" + length +
-                ", height=" + height +
+                ", type=" + type +
                 ", width=" + width +
+                ", thickness=" + thickness +
+                ", articul_new='" + articul_new + '\'' +
+                ", title_new='" + title_new + '\'' +
                 '}';
     }
-
 }

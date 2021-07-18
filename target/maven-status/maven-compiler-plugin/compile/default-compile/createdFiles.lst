@@ -1,6 +1,0 @@
-Main.class
-dao\TestTableDao.class
-services\TestTableService.class
-models\TestTable.class
-Controller.class
-utils\HibernateSessionFactoryUtil.class

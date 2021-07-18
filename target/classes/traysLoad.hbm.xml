@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="models.TraysLoad" table="traysload">
+        <id name="id" type="int" column="id">
+        </id>
+        <property name="trays_type" type="int" column="trays_type"/>
+        <property name="step" type="double" column="step"/>
+        <property name="ths" type="double" column="ths"/>
+
+
+        <property name="hi25" type="double" column="hi25"/>
+        <property name="hi40" type="double" column="hi40"/>
+        <property name="hi50" type="double" column="hi50"/>
+        <property name="hi60" type="double" column="hi60"/>
+        <property name="hi75" type="double" column="hi75"/>
+        <property name="hi85" type="double" column="hi85"/>
+        <property name="hi100" type="double" column="hi100"/>
+        <property name="hi110" type="double" column="hi110"/>
+        <property name="hi120" type="double" column="hi120"/>
+        <property name="hi150" type="double" column="hi150"/>
+        <property name="hi160" type="double" column="hi160"/>
+        <property name="hi200" type="double" column="hi200"/>
+        <property name="hi70" type="double" column="hi70"/>
+        <property name="hi80" type="double" column="hi80"/>
+        <property name="hi125" type="double" column="hi125"/>
+        <property name="hi175" type="double" column="hi175"/>
+    </class>
+</hibernate-mapping>

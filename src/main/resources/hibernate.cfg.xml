@@ -4,14 +4,14 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">	org.postgresql.Driver</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/practiceTest</property>
 
         <property name="hbm2ddl.auto">update</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password">123</property>
         <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect </property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
         <property name="show_sql">true</property>
 
 
@@ -22,6 +22,8 @@
         <mapping resource="cover.hbm.xml"/>
         <mapping resource="cables.hbm.xml"/>
         <mapping resource="trays.hbm.xml"/>
+        <mapping resource="traysLoad.hbm.xml"/>
+
 
 
     </session-factory>

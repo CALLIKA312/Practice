@@ -7,8 +7,9 @@
         </id>
         <property name="mass" type="int" column="mass"/>
         <property name="length" type="int" column="length"/>
-        <property name="height" type="int" column="height"/>
+        <property name="type" type="int" column="type"/>
         <property name="width" type="int" column="width"/>
+        <property name="thickness" type="double" column="thickness"/>
         <property name="articul_new" type="string" column="articul_new"/>
         <property name="title_new" type="string" column="title_new"/>
     </class>
